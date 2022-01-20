@@ -84,10 +84,10 @@
     }
 
     #subbox {
-        margin-left: 50%;
         height: 574px;
-        background: rgb(245, 161, 123); 
+        background: rgb(255, 255, 255); 
         visibility: hidden;
+        border-style: groove;
     }
 
     .mainContainer {

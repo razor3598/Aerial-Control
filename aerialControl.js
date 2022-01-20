@@ -21,8 +21,11 @@ function changeCoordinates(xOld, yOld) {
 
 function getBallCoordinates() {
     var ball = document.getElementById("football");
-    const [xNew, yNew] = changeCoordinates(ball.style.left, ball.style.top);
+    const [xNew, yNew] = changeCoordinates(ball.style.left + window.scrollX, 
+                                            ball.style.top + window.scrollY);
     
+    alert(xNew);
+    alert(yNew)
     if (xNew > 100.0 || xNew < 0.0 || yNew > 100.0 || yNew < 0 || isNaN(xNew) || isNaN(yNew)) {
         document.getElementById("errorBox").innerHTML = "Incorrect ball co-ordinates";
         document.getElementById("errorBox").style.visibility = "visible";

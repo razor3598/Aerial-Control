@@ -57,7 +57,9 @@ function appendBall() {
   var div = document.createElement("div");
   div.setAttribute("class", "ball");
   div.setAttribute("id", "football");
-  div.style.top = "60%";
+  div.setAttribute("data-angle", 60);
+  div.onclick = function() {showBallDetails(this);};
+  div.style.top = "35em";
   div.style.zIndex = "2";
   mainContainer.appendChild(div);
 }
@@ -111,7 +113,6 @@ function appendData(data, className, idName, color) {
 }
 
 
-
 function assignPosition(team) {
   var teams = document.getElementsByClassName(team);
 
@@ -149,6 +150,7 @@ function checkPosition() {
   setInterval(displayCoords, 750);
 }
 
+
 function showDetails(event) {
   var infoBox = document.getElementById("player-info");
   infoBox.innerHTML = "";
@@ -173,7 +175,7 @@ function showDetails(event) {
   infoBox.appendChild(vX);
   
   var vY = document.createElement("span");
-  vY.innerHTML = "vY: ";
+  vY.innerHTML = "&emsp;vY: ";
   infoBox.appendChild(vY);
 
   var vY = document.createElement("input");
@@ -187,10 +189,37 @@ function showDetails(event) {
   infoBox.appendChild(vY);
 }
 
+
+function showBallDetails(event) {
+  var infoBox = document.getElementById("player-info");
+  infoBox.innerHTML = "";
+  infoBox.style.visibility = "visible";
+
+  var football = document.getElementById("football");
+
+  var angle = document.createElement("span");
+  angle.innerHTML = "Angle: ";
+  infoBox.appendChild(angle);
+
+  var angle = document.createElement("input");
+  angle.setAttribute("type", "number");
+  angle.setAttribute("value", football.getAttribute("data-angle"));
+  angle.setAttribute("min", "45");
+  angle.setAttribute("max", "85");
+  angle.addEventListener("focusout", setBallAngle);
+  angle.myBall = football;
+  infoBox.appendChild(angle);
+}
+
 function velocityXSet(event) {
   event.currentTarget.myPlayer.setAttribute("data-player_vX", event.currentTarget.value);
 }
 
 function velocityYSet(event) {
   event.currentTarget.myPlayer.setAttribute("data-player_vY", event.currentTarget.value);
+}
+
+function setBallAngle(event) {
+  event.currentTarget.myBall.setAttribute("data-angle", event.currentTarget.value);
+  
 }
