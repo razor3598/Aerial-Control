@@ -52,7 +52,7 @@ function returnPitchMembers(team) {
             const [x1, y1] = changeCoordinates(team[i].style.left + window.scrollX,
                 team[i].style.top + window.scrollY);
             
-            if (x1 < 0 || x1 > 100 || y1 < 0 || y1 > 100) {
+            if (x1 < 0.0 || x1 > 100.0 || y1 < 0.0 || y1 > 100.0) {
                 // Do nothing
             }
             
