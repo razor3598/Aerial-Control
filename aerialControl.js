@@ -23,9 +23,7 @@ function getBallCoordinates() {
     var ball = document.getElementById("football");
     const [xNew, yNew] = changeCoordinates(ball.style.left + window.scrollX, 
                                             ball.style.top + window.scrollY);
-    
-    alert(xNew);
-    alert(yNew)
+
     if (xNew > 100.0 || xNew < 0.0 || yNew > 100.0 || yNew < 0 || isNaN(xNew) || isNaN(yNew)) {
         document.getElementById("errorBox").innerHTML = "Incorrect ball co-ordinates";
         document.getElementById("errorBox").style.visibility = "visible";
@@ -40,13 +38,46 @@ function getBallCoordinates() {
     }
 
 
+
+function returnPitchMembers(team) {
+    const returnTeam = [];
+    for (let i = 0; i < team.length; i++) {
+        unit = team[i].style.left.slice(-2);
+        
+        if (unit === 'em') {
+            // Do nothing
+        } 
+
+        else {
+            const [x1, y1] = changeCoordinates(team[i].style.left + window.scrollX,
+                team[i].style.top + window.scrollY);
+            
+            if (x1 < 0 || x1 > 100 || y1 < 0 || y1 > 100) {
+                // Do nothing
+            }
+            
+            else {
+                returnTeam.push(team[i]);
+            } 
+        }     
+    }
+
+    return returnTeam;
+}
+
 function pitchControl(event) {
     const [xNew, yNew] = changeCoordinates(event.clientX + window.scrollX, 
                             event.clientY + window.scrollY);
-    alert(xNew);
-    alert(yNew);
+    
+    team1 = document.getElementsByClassName("reddot");
+    team2 = document.getElementsByClassName("bluedot");
 
-    //Aerial control here
+    const attackingTeam = returnPitchMembers(team1);
+    alert(attackingTeam.length);
+
+    const defendingTeam = returnPitchMembers(team2);
+    alert(defendingTeam.length);
+
 }
 
 }
