@@ -131,7 +131,8 @@ function assignPosition(team) {
       teams[i].style.left = hor + "em";
       teams[i].style.top = ver + "em";
       hor += 5;
-      if (hor === 95) {
+
+      if (hor >= (screen.width / 16) - 1) {
         ver = ver + Number(3);
         hor = Number(50) + Number(5);
       }
