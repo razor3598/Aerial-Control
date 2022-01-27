@@ -53,8 +53,7 @@
   .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
   }
-  
-.reddot, .bluedot, .ball {
+  .reddot, .bluedot{
     position: absolute;
     height: 20px;
     width: 20px;
@@ -72,8 +71,13 @@
     .ball {
         height: 15px;
         width: 15px;
-        background-color: #000000;
-    }
+        position: absolute;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        z-index: 10
+     }
 
     #footballField {
         width: 836px;
