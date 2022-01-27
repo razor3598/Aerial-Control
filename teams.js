@@ -69,6 +69,7 @@ function appendData(data, className, idName, color) {
   for (var i = 0; i < data.length; i++) {
       var div = document.createElement("div");
       div.setAttribute("class", className);
+      div.innerHTML = "<i class='fas fa-futbol fa-2x'></i>";
       div.setAttribute("id", idName + i );
       div.setAttribute("style", "background-color : " + color);
       div.setAttribute("data-player_name", data[i].player_name);
