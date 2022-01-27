@@ -56,6 +56,7 @@ function appendBall() {
   var mainContainer = document.getElementById("subbox");
   var div = document.createElement("div");
   div.setAttribute("class", "ball");
+  div.innerHTML = "<i class='fas fa-futbol fa-2x'></i>";
   div.setAttribute("id", "football");
   div.setAttribute("data-angle", 60);
   div.onclick = function() {showBallDetails(this);};
@@ -69,7 +70,6 @@ function appendData(data, className, idName, color) {
   for (var i = 0; i < data.length; i++) {
       var div = document.createElement("div");
       div.setAttribute("class", className);
-      div.innerHTML = "<i class='fas fa-futbol fa-2x'></i>";
       div.setAttribute("id", idName + i );
       div.setAttribute("style", "background-color : " + color);
       div.setAttribute("data-player_name", data[i].player_name);
