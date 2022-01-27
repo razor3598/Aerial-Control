@@ -32,7 +32,7 @@ function getBallCoordinates() {
 
     else {
         $(".ball").draggable("disable");
-        document.getElementById("errorBox").innerHTML = "Click on Ball End-coordinates";
+        document.getElementById("errorBox").innerHTML = "Click on Ball's destination.";
         document.getElementById("errorBox").style.visibility = "visible";
         document.getElementById("ballCoordinates").disabled = true;
         document.getElementById("footballField").addEventListener("click", pitchControl);
@@ -123,8 +123,19 @@ function probability_intercept_ball(player, xEnd, yEnd, T) {
 }
 
 function pitchControl(event) {
+
     const [xEnd, yEnd] = changeCoordinates(event.clientX + window.scrollX, 
                             event.clientY + window.scrollY);
+
+    let cross = document.createElement("div");
+    cross.setAttribute("id","cross");
+    cross.innerHTML = "<i class='fal fa-times-circle'></i>";
+    cross.style.position = "absolute";
+    cross.style.left = event.clientX + window.scrollX - 1 + 'px';
+    cross.style.top = event.clientY + window.scrollY - 1 + 'px';
+
+    document.body.appendChild(cross);
+
     var ball_speed = 20.0;                        
  
     team1 = document.getElementsByClassName("reddot");
@@ -226,9 +237,13 @@ function pitchControl(event) {
 
         document.getElementById("errorBox").innerHTML = "PPCFa: " + PPCFa  + "<br>" +
                                                         "PPCFd: " + PPCFd;
-
-        $(".ball").draggable("enable");
     }
+
+    $(".ball").draggable("enable");
+
+    setTimeout(function(){
+        $('#cross').remove();
+    }, 500);
 }
 
 }
