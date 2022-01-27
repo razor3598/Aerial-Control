@@ -56,7 +56,7 @@ function appendBall() {
   var mainContainer = document.getElementById("subbox");
   var div = document.createElement("div");
   div.setAttribute("class", "ball");
-  div.innerHTML = "<i class='fas fa-futbol fa-2x'></i>";
+  div.innerHTML = "<i class='fas fa-futbol fa'></i>";
   div.setAttribute("id", "football");
   div.setAttribute("data-angle", 60);
   div.onclick = function() {showBallDetails(this);};
