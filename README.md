@@ -1,4 +1,4 @@
-# Aerial-Control ⚽
+# Aerial-Control Model ⚽
 
 ## [Click to access the tool](https://razor3598.github.io/Aerial-Control/main.html)
 
