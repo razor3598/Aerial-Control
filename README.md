@@ -6,7 +6,7 @@
 
 Select two teams from the drop-down box. For now, the teams are Premier League teams of the 2020-2021 season.
 
-![Select Teams](res/1.PNG)
+![Select Teams](res/3.PNG)
 
 1. Drag and drop players and the ball to create the scenario.
 2. Set player velocities and ball launch angle.
