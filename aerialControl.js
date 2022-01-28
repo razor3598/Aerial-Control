@@ -124,6 +124,16 @@ function probability_intercept_ball(player, xEnd, yEnd, T) {
 
 function pitchControl(event) {
 
+    var ball = document.getElementById("football");
+    const [xNew, yNew] = changeCoordinates(ball.style.left + window.scrollX, 
+                                            ball.style.top + window.scrollY);
+     
+    if (xNew > 100.0 || xNew < 0.0 || yNew > 100.0 || yNew < 0 || isNaN(xNew) || isNaN(yNew)) {
+        document.getElementById("errorBox").innerHTML = "Incorrect ball co-ordinates";
+        document.getElementById("errorBox").style.visibility = "visible";
+        document.getElementById("footballField").removeEventListener("click", ballEndCoords);
+    }
+
     const [xEnd, yEnd] = changeCoordinates(event.clientX + window.scrollX, 
                             event.clientY + window.scrollY);
 
@@ -235,8 +245,8 @@ function pitchControl(event) {
         PPCFa = PPCFatt / ptot;
         PPCFd = PPCFdef / ptot;
 
-        document.getElementById("errorBox").innerHTML = "PPCFa: " + PPCFa  + "<br>" +
-                                                        "PPCFd: " + PPCFd;
+        document.getElementById("errorBox").innerHTML = "PPCFa: " + PPCFa.toFixed(3) + "<br>" +
+                                                        "PPCFd: " + PPCFd.toFixed(3);
     }
 
     $(".ball").draggable("enable");

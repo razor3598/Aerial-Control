@@ -8,6 +8,7 @@
     background-color: #fff;
     background: #fff;
     position: relative;
+    margin-left: 33%;
 }
 .select-style select {
     padding: 5px 8px;
@@ -47,12 +48,30 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin-left: 42%;
   }
   
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
   }
+
+  .dropbtn1 {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn1:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+
+
   .reddot, .bluedot{
     position: absolute;
     height: 20px;
@@ -113,4 +132,10 @@
 
     #player-info{
         border-style: groove; width: 55%; float: right; visibility: hidden;
+    }
+
+    #first-box{
+        margin: auto;
+        width: 30%;
+        margin-top: 15%;
     }

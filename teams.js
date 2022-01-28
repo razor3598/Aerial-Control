@@ -8,6 +8,7 @@ function checkTeams() {
       document.getElementById("team-box1").remove();
       document.getElementById("team-box2").remove();
       document.getElementById("team-button").remove();
+      document.getElementById("first-box").remove();
       document.getElementById("footballField").style.visibility = "visible";
       document.getElementById("subbox").style.visibility = "visible";
       document.getElementById("ballCoordinates").style.visibility = "visible";
@@ -200,7 +201,7 @@ function showBallDetails(event) {
   var football = document.getElementById("football");
 
   var angle = document.createElement("span");
-  angle.innerHTML = "Angle: ";
+  angle.innerHTML = "Launch Angle: ";
   infoBox.appendChild(angle);
 
   var angle = document.createElement("input");

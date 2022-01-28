@@ -13,9 +13,41 @@
       
 </head>
 <body>
-
-    <div class="select-style" id = "team-box1">
-        <select id = "team-1">
+    <div id="first-box">
+      <div>
+        <h1 style="text-align: center;">Aerial Control Module</h1>
+        <h3 style="text-align: center;">Select two teams: </h7>
+      </div>
+      
+      <div class="select-style" id = "team-box1">
+          <select id = "team-1">
+            <option value="Arsenal">Arsenal</option>
+            <option value="Aston Villa">Aston Villa</option>
+            <option value="Brighton">Brighton & Hove Albion</option>
+            <option value="Burnley">Burnley</option>
+            <option value="Chelsea">Chelsea</option>
+            <option value="CrystalPalace">Crystal Palace</option>
+            <option value="Everton">Everton</option>
+            <option value="Fulham">Fulham</option>
+            <option value="LeedsUnited">Leeds United</option>
+            <option value="LeicesterCity">Leicester City</option>
+            <option value="Liverpool">Liverpool</option>
+            <option value="ManchesterCity">Manchester City</option>
+            <option value="ManchesterUnited">Manchester United</option>
+            <option value="NewcastleUnited">Newcastle United</option>
+            <option value="SheffieldUnited">Sheffield United</option>
+            <option value="Southampton">Southampton</option>
+            <option value="Tottenham">Tottenham Hotspur</option>
+            <option value="WestBromwichAlbion">West Bromwich Albion</option>
+            <option value="WestHamUnited">West Ham United</option>
+            <option value="WolverhamptonWanderers">Wolverhampton Wanderers</option>
+          </select>
+          <input id ="teamColor1" type="color" value="#FE2A2A">
+        </div>
+        
+        
+        <div class="select-style" id = "team-box2">
+          <select id = "team-2" >
           <option value="Arsenal">Arsenal</option>
           <option value="Aston Villa">Aston Villa</option>
           <option value="Brighton">Brighton & Hove Albion</option>
@@ -36,38 +68,14 @@
           <option value="WestBromwichAlbion">West Bromwich Albion</option>
           <option value="WestHamUnited">West Ham United</option>
           <option value="WolverhamptonWanderers">Wolverhampton Wanderers</option>
-        </select>
-        <input id ="teamColor1" type="color" value="#FE2A2A">
-      </div>
-      
-      
-      <div class="select-style" id = "team-box2">
-        <select id = "team-2" >
-        <option value="Arsenal">Arsenal</option>
-        <option value="Aston Villa">Aston Villa</option>
-        <option value="Brighton">Brighton & Hove Albion</option>
-        <option value="Burnley">Burnley</option>
-        <option value="Chelsea">Chelsea</option>
-        <option value="CrystalPalace">Crystal Palace</option>
-        <option value="Everton">Everton</option>
-        <option value="Fulham">Fulham</option>
-        <option value="LeedsUnited">Leeds United</option>
-        <option value="LeicesterCity">Leicester City</option>
-        <option value="Liverpool">Liverpool</option>
-        <option value="ManchesterCity">Manchester City</option>
-        <option value="ManchesterUnited">Manchester United</option>
-        <option value="NewcastleUnited">Newcastle United</option>
-        <option value="SheffieldUnited">Sheffield United</option>
-        <option value="Southampton">Southampton</option>
-        <option value="Tottenham">Tottenham Hotspur</option>
-        <option value="WestBromwichAlbion">West Bromwich Albion</option>
-        <option value="WestHamUnited">West Ham United</option>
-        <option value="WolverhamptonWanderers">Wolverhampton Wanderers</option>
-        </select>
-        <input id ="teamColor2" type="color" value="#6C71FE">
-      </div>
-      <br>
-      <button onclick="checkTeams()" class="dropbtn" id ="team-button">Submit</button>
+          </select>
+          <input id ="teamColor2" type="color" value="#6C71FE">
+        </div>
+        <br>
+        <button onclick="checkTeams()" class="dropbtn" id ="team-button">Submit</button>
+          
+    </div>
+    
 
 
 
@@ -80,7 +88,7 @@
     </div>
     <br>
     <div class = "mainContainer">
-      <button onclick="getBallCoordinates()" style = "width:25%; visibility: hidden; float: left;" class="dropbtn" id = "ballCoordinates">Calculate Pitch Control</button>
+      <button onclick="getBallCoordinates()" style = "width:25%; visibility: hidden; float: left;" class="dropbtn1" id = "ballCoordinates">Calculate Pitch Control</button>
       <span id = "errorBox"></div>
       <div id = "player-info"></div>
 
