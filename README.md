@@ -1,5 +1,7 @@
 # Aerial-Control Model ⚽
 
+<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/26/26924.png">
+
 ## [Click to access the tool](https://razor3598.github.io/Aerial-Control/main.html)
 
 Select two teams from the drop-down box. For now, the teams are Premier League teams of the 2020-2021 season.
