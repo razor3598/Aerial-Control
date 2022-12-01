@@ -1,1 +1,141 @@
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 160px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff;
+    position: relative;
+    margin-left: 33%;
+}
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.select-style:after {
+    top: 50%;
+    left: 85%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+}
+.select-style select:focus {
+    outline: none;
+}
+  
 
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 42%;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  .dropbtn1 {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn1:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+
+
+  .reddot, .bluedot{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    }
+
+    .bluedot {
+    background-color: blue;
+    }
+
+    .ball {
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        z-index: 10
+     }
+
+    #footballField {
+        width: 836px;
+        height: 574px;
+        background-image: url(pitch.png);
+        visibility: hidden;
+        float: left;
+    }
+
+    #subbox {
+        height: 574px;
+        background: rgb(255, 255, 255); 
+        visibility: hidden;
+        border-style: groove;
+    }
+
+    .mainContainer {
+        width: 100%;
+    }
+    
+    #results {
+    text-align: center;
+    visibility: hidden;
+    }
+
+    #csvtable {
+        visibility: hidden;
+    }
+
+    #errorBox {
+        color: red; visibility: hidden; float: left; width: 15%; margin-top: 0.7%;
+    }
+
+    #player-info{
+        border-style: groove; width: 55%; float: right; visibility: hidden;
+    }
+
+    #first-box{
+        margin: auto;
+        width: 30%;
+        margin-top: 15%;
+    }
